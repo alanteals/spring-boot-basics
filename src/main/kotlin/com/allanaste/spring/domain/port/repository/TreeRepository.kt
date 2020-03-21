@@ -5,5 +5,8 @@ import com.allanaste.spring.domain.Tree
 // output port or driven port
 
 interface TreeRepository {
-    fun getTreeById(id : Int): Tree
+
+    fun findById(id : Int): Tree?
+
+    fun save(tree: Tree): Tree
 }
